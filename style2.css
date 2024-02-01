@@ -1,0 +1,265 @@
+
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(#FFC0CB, #40E0D0, #FFC0CB);
+  }
+  
+  .envelope {
+    position: relative;
+    cursor: pointer;
+    width: 500px; 
+    height: 400px; 
+  }
+  
+  .back {
+    position: relative;
+    width: 250px;
+    height: 200px;
+    background: #6247aa;
+  }
+
+  .front {
+    position: absolute;
+    border-right: 260px solid #9683EC; 
+    border-top: 200px solid transparent; 
+    border-bottom: 200px solid transparent; 
+    height: 0;
+    width: 0;
+    top: 0;
+    left: 240px; 
+    z-index: 3;
+  }
+
+  .front:before {
+    content: "";
+    position: absolute;
+    border-left: 260px solid #9683EC; 
+    border-top: 200px solid transparent; 
+    border-bottom: 200px solid transparent; 
+    height: 0;
+    width: 0;
+    top: -200px; 
+    left: -240px; 
+  }
+
+  .front:after {
+    content: "";
+    position: absolute;
+    border-bottom: 210px solid #7F6FD8; 
+    border-left: 250px solid transparent; 
+    border-right: 250px solid transparent; 
+    height: 0;
+    width: 0;
+    top: -10px; 
+    left: -240px; 
+  }
+ 
+  .top {
+    position: absolute;
+    border-top: 210px solid #CCCCFF; 
+    border-left: 250px solid transparent; 
+    border-right: 250px solid transparent;
+    height: 0;
+    width: 0;
+    top: 0;
+    transform-origin: top;
+    transition: 0.4s;
+  }
+  
+  .envelope:hover .top {
+    transform: rotateX(160deg);
+  }
+  
+  .letter {
+    position: absolute;
+    background: white;
+    width: 460px; 
+    height: 360px; 
+    top: 20px; 
+    left: 20px;
+    transition: 0.2s;
+  }
+
+  .envelope:hover .letter {
+    transform: translateY(-200px);
+    z-index: 2;
+  }
+
+  .text {
+    text-align: center;
+    font-size: 22px; 
+    font-family: "Nunito";
+    margin-top: 40px; 
+    font-weight: bold;
+    color: black;
+    position: relative;
+    top: -20px;
+    left: 40px; 
+  }
+  
+  /*---heart -----*/
+  .heart {
+    background-color: red;
+    height: 70px;
+    width: 70px;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    transform: rotate(-45deg);
+    box-shadow: -5px 10px 90px red;
+    animation: untoldcoding 0.8s linear infinite;
+  }
+  
+  @keyframes untoldcoding {
+    0% {
+      transform: rotate(-45deg) scale(1.05);
+    }
+    70% {
+      transform: rotate(-45deg) scale(1);
+    }
+    100% {
+      transform: rotate(-45deg) scale(0.8);
+    }
+  }
+
+  .heart:before {
+    content: "";
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background-color: red;
+    top: -40px;
+    border-radius: 50px;
+  }
+
+  .heart:after {
+    content: "";
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background-color: red;
+    right: -40px;
+    border-radius: 50px;
+  }
+  
+  
+  .animation-box {
+    width: 75%;
+    height: 27.5rem;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .animation-container {
+    width: 1000rem;
+    height: 30rem;
+  }
+  
+  .first-text {
+    font-size: 25px;
+    position: absolute;
+    align-items: center;
+    left: 1rem;
+    top: 5rem;
+    opacity: 0;
+    animation-name: topFadeOut;
+    animation-delay: 2s;
+    animation-duration: 8s;
+    color: black;
+    text-shadow:  -1px 1px #FF6F61,  
+         1px -1px 1px black,
+        -1px  1px 1px #FF6F61,
+         1px  1px 1px black;
+  }
+
+  .second-text {
+    font-size: 25px;
+    position: absolute;
+    align-items: center;
+    left: 1rem;
+    top: 5rem;
+    opacity: 0;
+    animation-name: topFadeOut;
+    animation-delay: 11s;
+    animation-duration: 8s;
+    color: black;
+    text-shadow:  -1px 1px #FF6F61,  
+         1px -1px 1px black,
+        -1px  1px 1px #FF6F61,
+         1px  1px 1px black;
+  }
+
+  .third-text {
+    font-size: 25px;
+    position: absolute;
+    align-items: center;
+    left: 1rem;
+    top: 5rem;
+    opacity: 0;
+    animation-name: topFadeOut;
+    animation-delay: 20s;
+    animation-duration: 8s;
+    color: black;
+    text-shadow:  -1px 1px #FF6F61,  
+         1px -1px 1px black,
+        -1px  1px 1px #FF6F61,
+         1px  1px 1px black;
+  }
+
+  .fourth-text {
+    font-size: 25px;
+    position: absolute;
+    align-items: center;
+    left: 1rem;
+    top: 5rem;
+    opacity: 0;
+    animation-name: topFadeOut;
+    animation-delay: 29s;
+    animation-duration: 8s;
+    color: black;
+    text-shadow:  -1px 1px #FF6F61,  
+         1px -1px 1px black,
+        -1px  1px 1px #FF6F61,
+         1px  1px 1px black;
+  }
+
+  .fifth-text {
+    font-size: 30px;
+    position: absolute;
+    left: 1rem;
+    top: 5rem;
+    opacity: 0;
+    animation-name: topFadeOut;
+    animation-duration: 5s;
+    color: black;
+    animation-delay: 38s;
+    animation-duration: 8s;
+    color: #FF6F61;
+    text-shadow:  -2px 2px black,  
+    2px -2px 2px black,
+   -2px  2px 2px black,
+    2px  2px 2px black;
+  }
+
+  @keyframes topFadeOut {
+    0% {
+      position: absolute;
+      top: -1rem;
+      opacity: 0;
+    }
+  
+    75% {
+      position: absolute;
+      top: 25%;
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0;
+    }
+  }
+  
